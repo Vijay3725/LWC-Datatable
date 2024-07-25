@@ -1,0 +1,15 @@
+<template>
+    <lightning-card>
+        <lightning-input label="Search Account" placeholder="Search Account" onkeyup={handleChange}></lightning-input>
+        <template lwc:if={showAccounts}>
+            <lightning-datatable
+              columns={columns}
+              key-field="Id"
+              data={result}
+              hide-checkbox-column="true"
+            >
+            </lightning-datatable>
+        </template>
+        
+    </lightning-card>
+</template>
